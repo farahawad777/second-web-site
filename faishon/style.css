@@ -1,0 +1,838 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Dancing Script';
+font-family:Georgia, 'Times New Roman', Times, serif;
+perspective: 700px;
+background-color: rgba(249, 213, 181, 0.183)
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.container{
+    margin: 0px 80px;
+}
+.Nav{
+    position: relative;
+}
+.Nav .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Nav .content img{
+    width: 80px;
+    height: auto;
+}
+.Nav .content .search{
+    display: flex;
+    gap: 30px;
+    border: 1px solid black;
+    padding: 1rem 3.5rem 1rem 1rem;
+    align-items: center;
+    position: relative;
+}
+.Nav .content .search input{
+    border: none;
+    color: #7e1d9e;
+    outline: none;
+    font-size: 22px;
+}
+.Nav .content .search .select label{
+    color: rgb(244, 165, 96);
+    font-size: 22px;
+}
+.Nav .content .search .select select{
+    color:#54146a;
+    border-color:rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.Nav .content .search .select i{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    box-sizing: content-box;
+    width: 3.5rem;
+    height: 100%;
+    background-color: #511366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(243, 242, 242);
+    font-size: 2rem;
+    cursor: pointer;
+}
+.Nav .content ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.Nav .content ul i{
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    transition: .3s;
+}
+.Nav .content ul i:hover{
+    background-color: #511366;
+    color: white;
+}
+.Nav .links{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(7, 2, 2, 0.967);
+    padding: 1rem 3rem;
+    color:white;
+}
+.Nav .links ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Nav .links ul a{
+    color:#7a1549;
+    cursor: pointer;
+    font-size: 20px;
+}
+.Nav .links ul li {
+    position: relative;
+    padding: 6px;
+}
+.Nav .links ul li::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -2px;
+    height: 0%;
+    width: 100%;
+    border-color: #511366;
+    border-width: 0 2px;
+    border-style:dotted;
+    transition: .3s;
+}
+.Nav .links ul li::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -2px;
+    height: 100%;
+    width: 0%;
+    border-color: #511366;
+    border-width: 2px 0;
+    border-style: dotted;
+    transition: -1.8s;
+}
+.Nav .links ul li:hover::after{
+    height: calc(99% + 2px);
+}
+.Nav .links ul li:hover::before{
+    width: calc(99% + 2px);
+}
+.Nav .links ul li i{
+    position: relative;
+}
+.Nav .links ul span{
+    font: size 30px;
+}
+.Nav .links ul span i::after{
+    position: absolute;
+    content: "0";
+    bottom: 21px;
+    right: 25px;
+    color:white;
+    background-color: #66133e;
+    border-radius: 70%;
+    padding: 2px 4px;
+    font-size: 14px;
+}
+.list{
+    position: relative;
+}
+.list .beaut{
+    position: absolute;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.771);
+    bottom: -131px;
+    width: 160px;
+    left: -4px;
+    padding: 0px 20px 10px 20px;
+    z-index: 50;
+    visibility:hidden;
+    transition: .3s;
+}
+.list .beaut li{
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.list:hover .beaut{
+    visibility: visible;
+}
+/* End Nav */
+/* Start Hero */
+.Hero{
+    height: 100vh;
+    background-image: url(../صور/تنزيل\ \(1\).jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 67px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+.Hero::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 75%);
+    z-index: 1;
+}
+.Hero h2{
+    color: white;
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
+    font-size: 4rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+ 
+}
+.Hero .image{
+    margin: 55px auto;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    width: 70%;
+}
+.Hero .image::after{
+    position: absolute;
+    content: '\f105';
+    font: normal normal normal 14px/1 FontAwesome;
+    top: 50%;
+    right: 0;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: .3s;
+}
+.Hero .image::before{
+    position: absolute;
+     content: '\f104';
+    font: normal normal normal 14px/1 FontAwesome;
+    top: 50%;
+    left: 0;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: .3s;
+}
+.Hero .image img{
+    width: 250px;
+    height: 400px;
+}
+/* End Hero */
+/* Start Sale */
+.Sale{
+  margin: 60px 0px;
+  padding: 4rem 0px;
+}
+.Sale .image{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Sale .image img{
+    width: 330px;
+    height: 330px;
+    border-radius: 40%;
+    background-color: gray;
+    overflow: hidden;
+    width: 100%;
+  
+}
+.Sale .image .img{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.Sale .image .img:hover{
+    transform: scale(1.3);
+}
+.Sale .image .img::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.557);
+    transition: 0.3s;
+}
+.Sale .image .img::before{
+    position: absolute;
+    content: 'new sale';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 0%;
+    text-align: center;
+    color: transparent;
+    background-color:#66133e9b;
+    padding: 1rem 0px;
+    font-weight: bold;
+    border-radius: 0px;
+    transition: 0.5s;
+}
+.Sale .image .img:hover::before{
+    width: 100%;
+    color: rgb(248, 242, 242);
+}
+.Sale .image .img:hover::after{
+    width: 0%;
+    height: 0%;
+}
+/* End Sale */
+/* start main*/
+.main{
+    margin: 60px 0px;
+}
+
+ .title{
+    text-align: center;
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+ .title::after{
+    position: absolute;
+    content: '';
+    height: 3px;
+    background-color:  #66133e;
+    width: 50px;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: .3s;
+}
+.title:hover::after{
+    width: 120px;
+}
+.main .boxs{
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0;
+}
+.main .boxs .box{
+    text-align: center;
+    box-shadow: 0px 0px 14px 2px  #66135f;
+    padding: 1rem 2.5rem;
+    position: relative;
+}
+.main .boxs .box:hover::before{
+    visibility: visible;
+}
+.main .boxs .box::after{
+    position: absolute;
+    content: 'Sale';
+    top: 6px;
+    left: 6px;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color:  #66133e;
+    color: rgb(247, 245, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .boxs .box::before{
+    position: absolute;
+    content: "\f0a4";
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    content: "\f0a4";
+    font: normal normal normal 14px/1 FontAwesome;
+    bottom: 3.6rem;
+    right: 3rem;
+    color:  #66133e;
+    font-size: 25px;
+    font-weight: bold;
+    animation-name: toright;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    visibility: hidden;
+    transform: 15s;
+}
+@keyframes toright{
+    0%{
+        right: 3rem;
+    }
+    40%{
+        right: 1.3rem;
+    }
+    80%{
+        right: 3rem;
+    }
+}
+.main .boxs .box img{
+    width: 200px;
+    height: 200px;
+}
+.main .boxs .box h3{
+    margin: 20px 0px;
+    font-size: 22px;
+    font-weight: 800;
+}
+.main .boxs .box ul{
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    margin-bottom: 10px;
+}
+.main .boxs .box ul li i{
+    color:  sandybrown
+}
+.main .boxs .box p{
+    font-size: 20px;
+}
+.main .boxs .box button{
+    border: navajowhite;
+    background-color:  #66133e;
+    padding: 8px 12px;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 15px 0px;
+
+}
+.main .boxs .box .forth{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .boxs .box .forth i{
+    color:  #66135f;
+}
+/* End main */
+/* Start Makeup */
+.Makeup{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+    margin: 60px 0px;
+}
+.titel-men{
+ color: #54146a;
+ position: relative;
+ font-weight: 700;
+}
+.titel-men::after{
+    position: absolute;
+    content: '';
+    width: 300px;
+    height: 3px;
+    background-color: #54146a;
+    left: 0;
+    bottom: -12px;
+}
+.Makeup .box img{
+    width: 100%;
+    height: 300px;
+}
+.Makeup .box1{
+    flex: 2;
+    position: relative;
+    height: 400px;
+}
+.Makeup .box1 img{
+    height: 400px;
+    width: 100%;
+}
+.Makeup .box1 .text{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background-color: rgba(13, 1, 1, 0.733);
+    color: white;
+    flex-direction: column;
+    gap: 15px;
+}
+.Makeup .box1 .text h2{
+ font-size: 3rem;
+
+}
+.Makeup .box1 .text button{
+ border: none;
+ background-color: rgba(244, 165, 96, 0.6);
+ padding: 1rem 3rem;
+ font-size: 1.5rem;
+ cursor: pointer;
+ font-weight: normal;
+}
+.Makeup .box2{
+    flex: 1;
+    height: 400px;
+    transition: .3s;
+}
+.Makeup .box2:hover{
+    transform: scale(1.1);
+}
+.Makeup .box3{
+    flex: 1;
+    height: 400px;
+    transition: .3s;
+}
+.Makeup .box3:hover{
+    transform: scale(1.1);
+}
+.Makeup .box p{
+    font-size: 20px;
+    margin: 10px 0px;
+    color: #66133e;
+}
+.Makeup .box .forth{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Makeup .box .forth span{
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 4px 0px;
+    display: block;
+}
+.Makeup .box .forth button{
+   
+    color: #66133e;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 5px;
+}
+.Makeup .box ul{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.Makeup .box ul li i{
+    color: sandybrown
+}
+/* End Makeup */
+/* Start Deliver */
+.Deliver {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 60px 0px 120px;
+}
+.Deliver  .box{
+    text-align: center;
+    background-image: url(../image/service-icon.png);
+    height: 55px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    transition: .5s;
+}
+.Deliver  .box h2{
+    margin-bottom: 10px;
+    color:  #66135f;
+}
+.Deliver  .box p{
+    color: black;
+}
+
+.Deliver  .box1{
+  background-position: center -181px;
+} 
+.Deliver .box1:hover{
+    background-position: center -271px;
+
+}
+.Deliver  .box2{
+    background-position: center -361px;
+}
+.Deliver  .box2:hover{
+    background-position: center -451px;
+
+}
+.Deliver  .box3{
+    background-position: center -545px;
+}
+.Deliver  .box3:hover{
+    background-position: center -635px;
+
+}
+.Deliver  .box4{
+    background-position: center -725px;
+}
+.Delivery .box4:hover{
+    background-position: center -815px;
+
+}
+.Deliver  .box h2{
+    margin-top: 65px;
+}
+.Deliver  .box1,
+.Deliver  .box2,
+.Deliver  .box3,
+.Deliver  .box4{
+    position: relative;
+}
+.Deliver  .box1::after,
+.Deliver  .box2::after,
+.Deliver  .box3::after,
+.Deliver  .box4::after{
+    position: absolute;
+    content: "";
+    width: 2.5px;
+    background-color: #66135f;
+    height: 160px;
+    top: 0;
+    left: -15px;
+}
+/* End Deliver*/
+/* Start Products */
+.ProductS{
+    margin: 60px 0px;
+}
+.ProductS .list{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    margin: 50px 0px;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+.ProductS .list li{
+    color: rgb(11, 1, 1);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.ProductS .list li:hover{
+    transform: translateY(-5px);
+    text-shadow:  0px 0px 8px;
+}
+.ProductS .boxs{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+.ProductS .box {
+    width: 23%;
+    position: relative;
+    height: 412px;
+    transform-style: preserve-3d;
+    transition: .3s;
+}
+.ProductS .box:hover{
+    transform: rotateY(180deg);
+}
+.ProductS .box .front{
+    position: absolute;
+    width: 270px;
+    height: 410px;
+    z-index: 1;
+    backface-visibility: hidden;
+    background-color: white;
+}
+.ProductS .box .back{
+    position: absolute;
+    width: 270px;
+    height: 410px;
+    background-color: rgba(0, 0, 0, 0.913);
+    transform: rotateY(180deg);
+    text-align: left;
+    padding: 1rem;
+}
+.ProductS .box .back .icons{
+    display: flex;
+    gap: 20px;
+    margin: 20px 0px;
+    align-items: center;
+}
+.ProductS .box .back .icons ul{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+.ProductS .box .back .icons ul li{
+    display: inline;
+}
+.ProductS .box .back .icons ul li i{
+    color: gold;
+    font-size: 15px;
+}
+.ProductS .box .back h2{
+color: white;
+}
+.ProductS .box .back h4{
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: white;
+}
+.ProductS .box .back .type{
+    display: flex;
+    gap: 10px;
+
+}
+.ProductS .box .back .type li{
+    background-color:#66133e;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.ProductS .box .back button{
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    background-color:#66133e; 
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.ProductS .box .back .icons span{
+    color: sandybrown;
+    font-size: 1rem;
+    margin: 0px;
+}
+.ProductS .box img{
+    max-width: 100%;
+    height: 100%;
+}
+.ProductS .box .text{
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.625);
+    width: 100%;
+    display: flex;
+    bottom: 0;
+    justify-content: space-between;
+    padding: 12px;
+    color:rgba(244, 165, 96, 0.892);
+    align-items: center;
+}
+.ProductS .box span{
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    display: block;
+    margin-bottom: 5px;
+}
+.ProductS .box ul li{
+    color: gold;
+}
+.ProductS .box p{
+    font-weight: bold;
+    border: 1px solid rgb(114, 20, 80) ;
+    padding: 5px;
+    border-radius: 6px;
+}
+/* End Products */
+/* start final */
+.final{
+    text-align: center;
+    padding: 3rem;
+    background-color: rgba(0, 0, 0, 0.869);
+    height: 20rem;
+    position: relative;
+}
+.final .bottom{
+    position: absolute;
+    content: '';
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 20px solid;
+    border-color:#511366 transparent transparent transparent;
+}
+.final img{
+    width: 7rem;
+    margin-bottom: 30px;
+}
+.final p{
+    margin-bottom: 10px;
+    color:rgba(255, 255, 255, 0.707);
+    letter-spacing: 0px;
+}
+.final .icon {
+    width: 100%;
+    position: absolute;
+    height: 2rem;
+    background-color: rgb(0, 0, 0);
+    left: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color:#511366;
+    font-weight: bold;
+}
+/* end final */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
